@@ -1,0 +1,30 @@
+@media only screen and (max-width: 1199px)
+    .large-screen-up
+        display: none !important
+
+@media only screen and (min-width: 1200px)
+    .medium-screen-only
+        display: none !important
+
+@media only screen and (max-width: 767px)
+    .medium-screen-only
+        display: none !important
+
+@media only screen and (max-width: 767px)
+    .medium-screen-up
+        display: none !important
+
+@media only screen and (min-width: 1200px)
+    .medium-screen-down
+        display: none !important
+
+@media only screen and (min-width: 768px)
+    .small-screen-only
+        display: none !important
+
+@mixin gj-content
+    box-sizing: border-box
+    padding: 1em
+    width: 100%
+    max-width: $maxWidthLargeScreen
+    margin: 0 auto

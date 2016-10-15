@@ -1,0 +1,157 @@
+<div class="gj-hero">
+    <div class="gj-hero-content">
+        <h1>Our Products</h1>
+        <p>
+            Includes 3-tiers of product packages that range between value, premium, and performance.
+        </p>
+    </div>
+</div>
+<div class="gj-content">
+    <div id="products-comparison-grid">
+        <div id="products-comparion-grid-header" class="products-comparion-grid-row">
+            <div class="gj-content-block">
+            </div>
+            <div class="gj-content-block">
+                <h2>Value</h2>
+            </div>
+            <div class="gj-content-block">
+                <h2>Premium</h2>
+            </div>
+            <div class="gj-content-block">
+                <h2>Performance</h2>
+            </div>
+        </div>
+        <div class="products-comparion-grid-row">
+            <div class="gj-content-block">
+                <span>
+                    Server Solutions
+                </span>
+            </div>
+            <div class="gj-content-block">
+                <span>
+                    Entry Business Grade Server, Windows Server 2012 Foundation
+                </span>
+            </div>
+            <div class="gj-content-block">
+                <span>
+                    Business Grade Server, Windows Server 2012 Essentials
+                </span>
+            </div>
+            <div class="gj-content-block">
+                <span>
+                    Performance Business Grade Server, Windows Server 2012 Essentials or Standard
+                </span>
+            </div>
+        </div>
+        <div class="products-comparion-grid-row">
+            <div class="gj-content-block">
+                <span>
+                    Client Workstations
+                </span>
+            </div>
+            <div class="gj-content-block">
+                <span>
+                    Includes 3 Entry-level Business Grade Workstations - Scalable up to 10
+                </span>
+            </div>
+            <div class="gj-content-block">
+                <span>
+                    Includes 5 Premium Business Grade Workstations - Scalable up to 25
+                </span>
+            </div>
+            <div class="gj-content-block">
+                <span>
+                    Includes 10 Performance Business Grade Workstations - Scalable up to 50
+                </span>
+            </div>
+        </div>
+        <div class="products-comparion-grid-row">
+            <div class="gj-content-block">
+                <span>
+                    Backup Solutions
+                </span>
+            </div>
+            <div class="gj-content-block">
+                <span>
+                    Server file system backups
+                </span>
+            </div>
+            <div class="gj-content-block">
+                <span>
+                    Server and Client Backup Solutions
+                </span>
+            </div>
+            <div class="gj-content-block">
+                <span>
+                    Server and Client Backup Solutions
+                </span>
+            </div>
+        </div>
+        <div class="products-comparion-grid-row">
+            <div class="gj-content-block">
+                <span>
+                    Redundancy Solutions
+                </span>
+            </div>
+            <div class="gj-content-block">
+                <span>
+                    Not offered
+                </span>
+            </div>
+            <div class="gj-content-block">
+                <span>
+                    Optional: Hot Standby Server
+                </span>
+            </div>
+            <div class="gj-content-block">
+                <span>
+                    Optional: Hot Standby Server
+                </span>
+            </div>
+        </div>
+        <div class="products-comparion-grid-row">
+            <div class="gj-content-block">
+                <span>
+                    Hardware Installation and Setup
+                </span>
+            </div>
+            <div class="gj-content-block">
+                <span>
+                    Not offered
+                </span>
+            </div>
+            <div class="gj-content-block">
+                <span>
+                    Included
+                </span>
+            </div>
+            <div class="gj-content-block">
+                <span>
+                    Included
+                </span>
+            </div>
+        </div>
+        <div class="products-comparion-grid-row">
+            <div class="gj-content-block">
+                <span>
+                    Package Starting Prices
+                </span>
+            </div>
+            <div class="gj-content-block">
+                <span>
+                    $6,500
+                </span>
+            </div>
+            <div class="gj-content-block">
+                <span>
+                    $10,000
+                </span>
+            </div>
+            <div class="gj-content-block">
+                <span>
+                    $25,000
+                </span>
+            </div>
+        </div>
+    </div>
+</div>

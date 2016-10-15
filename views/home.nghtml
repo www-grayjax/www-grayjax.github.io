@@ -1,0 +1,40 @@
+<div class="gj-hero">
+    <div class="gj-hero-content">
+        <h1>Full Suite Computing and Networking Solutions</h1>
+        <p>
+            Stay ahead with GrayJax's products and professional streamlining services
+            <br />
+            for law offices, dental offices, medical facilities, accounting firms, real estate, and restaurants.
+        </p>
+        <a class="gj-button gj-button-secondary" href="/products">See Our Products</a>
+    </div>
+</div>
+<div class="gj-content">
+    <div class="gj-content-block">
+        <img src="" />
+        <h2>Hardware &amp; Networking Support</h2>
+        <ul>
+            <li>New office and network computing deployments</li>
+            <li>Existing system overhaul and computing deployments</li>
+            <li>Networking for wired/wireless networks, remote client access (VPN), and architecture/infrastructure planning</li>
+        </ul>
+    </div>
+    <div class="gj-content-block">
+        <img src="" />
+        <h2>Backup &amp; Recovery Solutions</h2>
+        <ul>
+            <li>Protection/Disaster Recovery</li>
+            <li>Local and Remote Backup Solutions</li>
+            <li>Routine Backup Services</li>
+        </ul>
+    </div>
+    <div class="gj-content-block">
+        <img src="" />
+        <h2>System Maintenance</h2>
+        <ul>
+            <li>Full computing hardware maintenance support services</li>
+            <li>Routine system health checks and upkeep</li>
+            <li>On-site and remote system troubleshooting and repair</li>
+        </ul>
+    </div>
+</div>

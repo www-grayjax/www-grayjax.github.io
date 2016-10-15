@@ -1,0 +1,103 @@
+---
+
+---
+
+@import "mixins"
+@import "colors"
+@import "common"
+
+$maxWidthLargeScreen: 1360px
+
+body
+    font-size: 16px
+
+header
+    +gj-content
+
+    display: flex
+    align-items: center
+    background: $white
+
+    a:first-of-type
+        flex: 2
+
+    a
+        flex: 1
+
+    .gj-button
+        flex: 2
+
+footer
+    padding-top: 1em
+    text-align: center
+    background: $gjGray
+
+    p, a
+        color: $white
+
+.gj-button
+    display: inline-block
+    box-sizing: border-box
+    padding: 0.5em 1em
+    color: $white
+    text-align: center
+    border-style: solid
+    border-width: 0.1625em
+    border-radius: 0.25em
+    margin-bottom: 1em
+
+    &.gj-button-primary
+        background: $gjBlue
+
+    &.gj-button-secondary
+        background: transparent
+        border-color: $white
+
+.gj-content
+    +gj-content
+
+.gj-hero-content
+    +gj-content
+
+    h1, p, a
+        color: $white
+
+.gj-content-block
+    display: inline-block
+
+.gj-form-row
+    display: flex
+
+    .gj-form-element:not(:first-child)
+        margin-left: 1em
+
+.gj-form-element
+    margin-bottom: 1em
+
+    > label:first-of-type
+        display: block
+        margin-bottom: 1em
+
+.gj-form-column-half
+    flex: 2
+
+.gj-form-column-quarter
+    flex: 1
+
+#contact
+    color: $white
+    text-align: center
+    background: $black
+
+#contact-content
+    +gj-content
+
+    h3, p, label
+        color: $white
+
+    form
+        text-align: left
+
+@import "pages/home"
+@import "pages/products"
+@import "pages/services"

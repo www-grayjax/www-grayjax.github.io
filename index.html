@@ -1,21 +1,97 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" ng-app="grayjax">
     <head>
         <meta charset="utf-8" />
-        <title>GrayJax</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="/css/index.css" rel="stylesheet">
+        <title>GrayJax Technologies</title>
         <script>
-            (function () {
-                var redirect = sessionStorage.redirect;
+            (function setOriginalPathNameInHistory() {
+                var originalPathName = window.sessionStorage.getItem('originalPathName');
 
-                delete sessionStorage.redirect;
+                if (originalPathName) {
+                    history.replaceState(null, null, originalPathName);
 
-                if (redirect && redirect !== location.href) {
-                    history.replaceState(null, null, redirect);
+                    window.sessionStorage.removeItem('originalPathName');
                 }
             })();
         </script>
+        <base href="/">
     </head>
-    <body>
-        Hello World!
+    <body ng-controller="GrayJaxRoot">
+        <header>
+            <a href="/">
+                <img src="/img/logo.png" alt="GrayJax Logo" />
+            </a>
+            <a href="/products">Products</a>
+            <a href="/services">Services</a>
+            <a href="/about-us">About Us</a>
+            <a href="#contact">Contact</a>
+            <a class="gj-button gj-button-primary">
+                Remote Tech Support
+                <br />
+                Coming Soon
+            </a>
+        </header>
+        <ng-view id="{{ pageId }}"></ng-view>
+        <div id="contact">
+            <div id="contact-content">
+                <h3>Interested in learning more about GrayJax's solutions?</h3>
+                <p>Contact us by filling out the form below and a GrayJax representative will reach out to you shortly:</p>
+                <form name="contactUsForm" method="POST" action="/" novalidate ng-init="contactUsRequest = {}" ng-submit=" contactUsForm.$valid ? null : $event.preventDefault()  ">
+                    <div class="gj-form-row">
+                        <div class="gj-form-element gj-form-column-quarter">
+                            <label for="contact-form-name-input">Name</label>
+                            <input id="contact-form-name-input" type="text" name="name" ng-model="contactUsRequest.name" required />
+                        </div>
+                        <div class="gj-form-element gj-form-column-quarter">
+                            <label for="contact-form-phone-number-input">Phone Number</label>
+                            <input id="contact-form-phone-number-input" type="tel" name="phoneNumber" ng-model="contactUsRequest.phoneNumber" required />
+                        </div>
+                        <div class="gj-form-element gj-form-column-half">
+                            <label for="contact-form-email-input">Email Address</label>
+                            <input id="contact-form-email-input" type="email" name="email" ng-model="contactUsRequest.email" required />
+                        </div>
+                    </div>
+                    <div class="gj-form-row">
+                        <div class="gj-form-element gj-form-column-quarter">
+                            <label for="contact-form-contact-method-input-option-{{ checked || 1 }}">Preferred Contact Method</label>
+                            <div class="gj-content-block">
+                                <input id="contact-form-contact-method-input-option-1" type="radio" name="preferredContactMethod" value="Phone" ng-click="checked = 2" />
+                                <label for="contact-form-contact-method-input-option-1">Phone</label>
+                            </div>
+                            <div class="gj-content-block">
+                                <input id="contact-form-contact-method-input-option-2" type="radio" name="preferredContactMethod" value="Email" checked ng-click="checked = 1" />
+                                <label for="contact-form-contact-method-input-option-2">Email</label>
+                            </div>
+                        </div>
+                        <div class="gj-form-element gj-form-column-quarter">
+                            <label for="contact-form-company-name-input">Company Name</label>
+                            <input id="contact-form-company-name-input" type="text" name="companyName" placeholder="optional" />
+                        </div>
+                        <div class="gj-form-element gj-form-column-half">
+                            <label for="contact-form-type-of-inquery-select">Type of Inquiry</label>
+                            <select id="contact-form-type-of-inquery-select" name="inquiryType" ng-model="contactUsRequest.inqueryType" required>
+                                <option value="Type 1">Type 1</option>
+                                <option value="Type 1">Type 2</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="gj-form-element">
+                        <label for="contact-form-description-textarea">Describe your inquiry:</label>
+                        <textarea id="contact-form-description-textarea" type="text" name="description" ng-model="contactUsRequest.description" required></textarea>
+                    </div>
+                    <button class="gj-button gj-button-secondary">Contact Us</button>
+                </form>
+            </div>
+        </div>
+        <footer>
+            <p>
+                &copy; 2016 GrayJax Technologies | (678) 372-5947 | <a href="mailto:info@GrayJaxTechnologies.com">info@GrayJaxTechnologies.com</a>
+            </p>
+        </footer>
+        <script src="/node_modules/angular/angular.min.js"></script>
+        <script src="/node_modules/angular-route/angular-route.min.js"></script>
+        <script src="/js/index.js"></script>
     </body>
 </html>

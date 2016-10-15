@@ -1,0 +1,94 @@
+<div class="gj-hero">
+    <div class="gj-hero-content">
+        <h1>
+            Workstation Flat Rate
+            <br />
+            Pick-up/Drop-Off Repair Service
+            <br />
+            &nbsp;
+            <br />
+            $99 service charge
+        </h1>
+        <p>*Price for service only</p>
+    </div>
+</div>
+<div class="gj-content">
+    <h2>
+        GrayJax Technologies also offers 3-tiers of support packages that offer scheduled routine maintenance, backup services, and on-site support visits.
+    </h2>
+
+    <div id="service-plans">
+        <div class="service-plan">
+            <h2>Basic</h2>
+            <h2>$129/month</h2>
+            <div class="service-plan-feature-block">
+                <strong>Scheduled On-Site Routine Visit</strong>
+                <br />
+                <span>1 per month</span>
+            </div>
+            <div class="service-plan-feature-block">
+                <strong>Unscheduled On-Site Service Calls</strong>
+                <br />
+                <span>$99/call</span>
+            </div>
+            <div class="service-plan-feature-block">
+                <strong>Remote Support</strong>
+                <br />
+                <span>Unlimited</span>
+            </div>
+            <div class="service-plan-feature-block">
+                <strong>Routine Off-Site Backup</strong>
+                <br />
+                <span>Every 12 Weeks</span>
+            </div>
+        </div>
+        <div class="service-plan">
+            <h2>Standard</h2>
+            <h2>$199/month</h2>
+            <div class="service-plan-feature-block">
+                <strong>Scheduled On-Site Routine Visit</strong>
+                <br />
+                <span>1 per month</span>
+            </div>
+            <div class="service-plan-feature-block">
+                <strong>Unscheduled On-Site Service Calls</strong>
+                <br />
+                <span>1 per month</span>
+            </div>
+            <div class="service-plan-feature-block">
+                <strong>Remote Support</strong>
+                <br />
+                <span>Unlimited</span>
+            </div>
+            <div class="service-plan-feature-block">
+                <strong>Routine Off-Site Backup</strong>
+                <br />
+                <span>Every 4 Weeks</span>
+            </div>
+        </div>
+        <div class="service-plan">
+            <h2>Professional</h2>
+            <h2>$299/month</h2>
+            <div class="service-plan-feature-block">
+                <strong>Scheduled On-Site Routine Visit</strong>
+                <br />
+                <span>3 per month</span>
+            </div>
+            <div class="service-plan-feature-block">
+                <strong>Unscheduled On-Site Service Calls</strong>
+                <br />
+                <span>2 per month</span>
+            </div>
+            <div class="service-plan-feature-block">
+                <strong>Remote Support</strong>
+                <br />
+                <span>Unlimited</span>
+            </div>
+            <div class="service-plan-feature-block">
+                <strong>Routine Off-Site Backup</strong>
+                <br />
+                <span>Every 2 Weeks</span>
+            </div>
+        </div>
+    </div>
+</div>

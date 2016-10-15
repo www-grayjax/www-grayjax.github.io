@@ -1,0 +1,11 @@
+{
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/www-grayjax/www-grayjax.github.io.git"
+  },
+  "author": "helious",
+  "dependencies": {
+    "angular": "^1.5.8",
+    "angular-route": "^1.5.8"
+  }
+}
