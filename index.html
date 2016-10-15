@@ -17,6 +17,7 @@
             })();
         </script>
         <base href="/">
+        <link rel="shortcut icon" href="/favicon.png" type="image/x-icon" />
     </head>
     <body ng-controller="GrayJaxRoot">
         <header>
@@ -28,9 +29,12 @@
             <a href="/about-us">About Us</a>
             <a href="#contact">Contact</a>
             <a class="gj-button gj-button-primary">
-                Remote Tech Support
-                <br />
-                Coming Soon
+                <img src="/img/remote-techsupport-icon.png" alt="Remote Tech Support - Coming Soon!" />
+                <div class="gj-content-block">
+                    Remote Tech Support
+                    <br />
+                    Coming Soon
+                </div>
             </a>
         </header>
         <ng-view id="{{ pageId }}"></ng-view>

@@ -11,7 +11,7 @@
 </div>
 <div class="gj-content">
     <div class="gj-content-block">
-        <img src="" />
+        <img src="/img/hardware-networking-icon.png" />
         <h2>Hardware &amp; Networking Support</h2>
         <ul>
             <li>New office and network computing deployments</li>
@@ -20,7 +20,7 @@
         </ul>
     </div>
     <div class="gj-content-block">
-        <img src="" />
+        <img src="/img/backup-recovery-icon.png" />
         <h2>Backup &amp; Recovery Solutions</h2>
         <ul>
             <li>Protection/Disaster Recovery</li>
@@ -29,7 +29,7 @@
         </ul>
     </div>
     <div class="gj-content-block">
-        <img src="" />
+        <img src="/img/system-maintenance-icon.png" />
         <h2>System Maintenance</h2>
         <ul>
             <li>Full computing hardware maintenance support services</li>
