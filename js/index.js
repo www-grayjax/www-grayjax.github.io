@@ -27,7 +27,11 @@ window.angular
     .controller('GrayJaxRoot', [
         '$scope',
         function GrayJaxRootController($scope) {
+            $scope.contactUsRequest = {}
+
             $scope.$on('$routeChangeSuccess', function onRouteChangeSuccess(event, currentRoute) {
+                $scope.contactUsForm.$setUntouched();
+console.log($scope.contactUsForm);
                 $scope.pageId = currentRoute.pageId;
             });
         }

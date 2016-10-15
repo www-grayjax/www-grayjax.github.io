@@ -35,6 +35,12 @@ footer
     p, a
         color: $white
 
+.ng-submitted .ng-invalid, .ng-touched.ng-invalid
+    border: 0.25em solid $gjRed
+
+    & ~ .contact-form-validation-error
+        display: inline
+
 .gj-button
     display: inline-block
     box-sizing: border-box
@@ -42,8 +48,9 @@ footer
     color: $white
     text-align: center
     border-style: solid
-    border-width: 1px
+    border-width: 0.125em
     border-radius: 0.25em
+    cursor: pointer
     margin-bottom: 1em
 
     &.gj-button-primary
@@ -84,6 +91,10 @@ footer
 
 .gj-form-column-quarter
     flex: 1
+
+.contact-form-validation-error
+    display: none
+    color: $gjLightRed
 
 #contact
     color: $white

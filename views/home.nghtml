@@ -14,27 +14,45 @@
         <img src="/img/hardware-networking-icon.png" />
         <h2>Hardware &amp; Networking Support</h2>
         <ul>
-            <li>New office and network computing deployments</li>
-            <li>Existing system overhaul and computing deployments</li>
-            <li>Networking for wired/wireless networks, remote client access (VPN), and architecture/infrastructure planning</li>
+            <li>
+                <span>New office and network computing deployments</span>
+            </li>
+            <li>
+                <span>Existing system overhaul and computing deployments</span>
+            </li>
+            <li>
+                <span>Networking for wired/wireless networks, remote client access (VPN), and architecture/infrastructure planning</span>
+            </li>
         </ul>
     </div>
     <div class="gj-content-block">
         <img src="/img/backup-recovery-icon.png" />
         <h2>Backup &amp; Recovery Solutions</h2>
         <ul>
-            <li>Protection/Disaster Recovery</li>
-            <li>Local and Remote Backup Solutions</li>
-            <li>Routine Backup Services</li>
+            <li>
+                <span>Protection/Disaster Recovery</span>
+            </li>
+            <li>
+                <span>Local and Remote Backup Solutions</span>
+            </li>
+            <li>
+                <span>Routine Backup Services</span>
+            </li>
         </ul>
     </div>
     <div class="gj-content-block">
         <img src="/img/system-maintenance-icon.png" />
         <h2>System Maintenance</h2>
         <ul>
-            <li>Full computing hardware maintenance support services</li>
-            <li>Routine system health checks and upkeep</li>
-            <li>On-site and remote system troubleshooting and repair</li>
+            <li>
+                <span>Full computing hardware maintenance support services</span>
+            </li>
+            <li>
+                <span>Routine system health checks and upkeep</span>
+            </li>
+            <li>
+                <span>On-site and remote system troubleshooting and repair</span>
+            </li>
         </ul>
     </div>
 </div>
