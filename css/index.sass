@@ -12,20 +12,28 @@ body
     font-size: 16px
 
 header
-    +gj-content
-
-    display: flex
-    align-items: center
     background: $white
 
-    a:first-of-type
-        flex: 2
+    > .gj-content-block
+        +gj-content
 
-    a
-        flex: 1
+        padding-top: 1em
+        padding-bottom: 1em
+        display: flex
+        align-items: center
 
-    .gj-button
-        flex: 2
+        a:first-of-type
+            flex: 2
+
+        a
+            flex: 1
+
+        .gj-button
+            flex: 2
+            margin-bottom: 0
+
+            img
+                margin-right: 1em
 
 footer
     padding-top: 1em
@@ -33,6 +41,8 @@ footer
     background: $gjGray
 
     p, a
+        font-size: inherit
+        font-weight: inherit
         color: $white
 
 .ng-submitted .ng-invalid, .ng-touched.ng-invalid
@@ -52,6 +62,10 @@ footer
     border-radius: 0.25em
     cursor: pointer
     margin-bottom: 1em
+    transition: all ease-in 0.1s
+
+    &:hover
+        color: $gjLightPurpleBlue
 
     &.gj-button-primary
         background: $gjBlue
@@ -61,11 +75,17 @@ footer
         background: transparent
         border-color: $white
 
+        &:hover
+            border-color: $gjLightPurpleBlue
+
 .gj-content
     +gj-content
 
 .gj-hero-content
     +gj-content
+
+    padding-top: 3.75em
+    padding-bottom: 3.75em
 
     h1, p, a
         color: $white
@@ -103,6 +123,9 @@ footer
 
 #contact-content
     +gj-content
+
+    padding-right: 10em
+    padding-left: 10em
 
     h3, p, label
         color: $white

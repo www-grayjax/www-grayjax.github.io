@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" ng-app="grayjax">
+<html lang="en" ng-app="grayJax">
     <head>
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -22,27 +22,30 @@
     </head>
     <body ng-controller="GrayJaxRoot">
         <header>
-            <a href="/">
-                <img src="/img/logo.png" alt="GrayJax Logo" />
-            </a>
-            <a href="/products">Products</a>
-            <a href="/services">Services</a>
-            <a href="#contact">Contact</a>
-            <a class="gj-button gj-button-primary">
-                <img src="/img/remote-techsupport-icon.png" alt="Remote Tech Support - Coming Soon!" />
-                <div class="gj-content-block">
-                    Remote Tech Support
-                    <br />
-                    Coming Soon
-                </div>
-            </a>
+            <div class="gj-content-block">
+                <a href="/">
+                    <img src="/img/logo.png" alt="GrayJax Logo" />
+                </a>
+                <a href="/products">Products</a>
+                <a href="/services">Services</a>
+                <a href="#contact">Contact</a>
+                <a class="gj-button gj-button-primary">
+                    <img src="/img/remote-techsupport-icon.png" alt="Remote Tech Support - Coming Soon!" />
+                    <div class="gj-content-block">
+                        Remote Tech Support
+                        <br />
+                        Coming Soon!
+                    </div>
+                </a>
+            </div>
         </header>
         <ng-view id="{{ pageId }}"></ng-view>
         <div id="contact">
             <div id="contact-content">
                 <h2>Interested in learning more about GrayJax's solutions?</h2>
                 <p>Contact us by filling out the form below and a GrayJax representative will reach out to you shortly:</p>
-                <form name="contactUsForm" method="POST" action="/" novalidate ng-submit=" contactUsForm.$valid ? null : $event.preventDefault(); contactUsForm.$setSubmitted() ">
+                <form name="contactUsForm" method="POST" action="{{ :: contactUsFormUrl }}" novalidate ng-submit=" contactUs($event) ">
+                    <input type="hidden" name="_next" value="/?hasContactedUs=true" />
                     <div class="gj-form-row">
                         <div class="gj-form-element gj-form-column-quarter">
                             <label for="contact-form-name-input">Name</label>
@@ -51,7 +54,7 @@
                         </div>
                         <div class="gj-form-element gj-form-column-quarter">
                             <label for="contact-form-phone-number-input">Phone Number</label>
-                            <input id="contact-form-phone-number-input" type="tel" name="phoneNumber" ng-model="contactUsRequest.phoneNumber" required />
+                            <input id="contact-form-phone-number-input" type="tel" name="phoneNumber" ng-model="contactUsRequest.phoneNumber" ui-mask="(999) 999-9999" required />
                             <span class="contact-form-validation-error">Please enter a valid phone number.</span>
                         </div>
                         <div class="gj-form-element gj-form-column-half">
@@ -103,6 +106,7 @@
         </footer>
         <script src="/node_modules/angular/angular.min.js"></script>
         <script src="/node_modules/angular-route/angular-route.min.js"></script>
+        <script src="/node_modules/angular-ui-mask/dist/mask.min.js"></script>
         <script src="/js/index.js"></script>
     </body>
 </html>

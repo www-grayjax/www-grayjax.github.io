@@ -1,17 +1,37 @@
+$grayBlue: #D1D0D0
+
 #services
     h2
         text-align: center
+        margin-bottom: 2em
 
     .gj-hero
         text-align: left
         background: url(/img/services-featured.jpg) no-repeat
         background-size: cover
 
-.service-plan
-    flex: 1
+    .service-plan
+        flex: 1
+        border: 1px solid $gjGray
 
-.service-plan-feature-block
-    border-top: 1px dotted $black
+        &:not(:first-of-type)
+            margin-left: 3em
+
+        h2
+            padding: 1em 2em
+            margin-bottom: 0
+
+            &:first-of-type
+                color: $white
+                background: $gjGray
+
+            &:last-of-type
+                color: $gjBlue
+                background: $grayBlue
+
+    .service-plan-feature-block
+        padding: 1em 2em
+        border-top: 1px dotted $black
 
 #service-plans
     display: flex

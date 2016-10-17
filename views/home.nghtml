@@ -1,3 +1,8 @@
+<div ng-if="hasContactedUs" id="contacted-us-banner" ng-class="{ 'gj-slide-up': hideContactedUsBanner }">
+    <div class="gj-content-block">
+        <span>Thank you for contacting us! A GrayJax representative will reach out to you shortly.</span>
+    </div>
+</div>
 <div class="gj-hero">
     <div class="gj-hero-content">
         <h1>Full Suite Computing and Networking Solutions</h1>

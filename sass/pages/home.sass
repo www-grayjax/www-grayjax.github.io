@@ -9,10 +9,42 @@
             margin-right: auto
             margin-left: auto
 
+        p
+            padding-bottom: 2em
+
     .gj-content
         display: flex
 
     .gj-content-block
         flex: 1
-
         text-align: center
+
+        &:not(:first-of-type)
+            margin-left: 4em
+
+        img
+            margin-bottom: 2em
+
+        ul
+            li
+                padding-left: 0.125em
+                margin-bottom: 1em
+
+#contacted-us-banner
+    position: relative
+    top: 0
+    text-align: center
+    color: $white
+    background: $gjGreen
+    transition: all linear 0.333s
+
+    &.gj-slide-up
+        top: -3em
+        margin-bottom: -3em
+        z-index: -1
+
+    .gj-content-block
+        +gj-content
+
+        padding-top: 0.75em
+        padding-bottom: 0.75em
