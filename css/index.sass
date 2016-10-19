@@ -18,6 +18,11 @@ header
         display: flex
         align-items: center
 
+        > a
+            img
+                +medium-screen-down
+                    margin-left: 2.5em
+
         .gj-button
             margin-bottom: 0
 
@@ -42,7 +47,6 @@ header
         +medium-screen-down
             justify-content: space-between
             flex-flow: wrap
-            padding-left: 2.5em
 
     [class*="hamburger"]
         background: $black
