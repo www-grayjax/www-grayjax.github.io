@@ -1,28 +1,29 @@
-@media only screen and (max-width: 1199px)
-    .large-screen-up
-        display: none !important
+$largeBreakpoint: 1200px
+$mediumBreakpoint: 768px
 
-@media only screen and (min-width: 1200px)
-    .medium-screen-only
-        display: none !important
+=keyframes($name)
+    @-webkit-keyframes #{$name}
+        @content
+    @-moz-keyframes #{$name}
+        @content
+    @-ms-keyframes #{$name}
+        @content
+    @keyframes #{$name}
+        @content
 
-@media only screen and (max-width: 767px)
-    .medium-screen-only
-        display: none !important
+=large-screen-up
+    @media only screen and (min-width: $largeBreakpoint)
+        @content
 
-@media only screen and (max-width: 767px)
-    .medium-screen-up
-        display: none !important
+=medium-screen-down
+    @media only screen and (max-width: $largeBreakpoint - 1)
+        @content
 
-@media only screen and (min-width: 1200px)
-    .medium-screen-down
-        display: none !important
+=small-screen-only
+    @media only screen and (max-width: $mediumBreakpoint - 1)
+        @content
 
-@media only screen and (min-width: 768px)
-    .small-screen-only
-        display: none !important
-
-@mixin gj-content
+=gj-content
     box-sizing: border-box
     padding: 2.5em 1em
     width: 100%

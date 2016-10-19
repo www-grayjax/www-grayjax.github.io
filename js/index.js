@@ -29,10 +29,11 @@ window.angular
         '$scope',
         '$sce',
         function GrayJaxRootController($scope, $sce) {
-            var CONTACT_US_EMAIL_ADDRESS = 'rangemonk@gmail.com';
+            var CONTACT_US_EMAIL_ADDRESS = 'info@grayjaxtechnologies.com';
 
+            $scope.menuOptions = { isOpen: false };
             $scope.contactUsFormUrl = $sce.trustAsResourceUrl('https://formspree.io/' + CONTACT_US_EMAIL_ADDRESS);
-            $scope.contactUsRequest = {}
+            $scope.contactUsRequest = {};
 
             $scope.contactUs = function contactUs($event) {
                 if (!$scope.contactUsForm.$valid) {
@@ -42,7 +43,7 @@ window.angular
 
                     return;
                 }
-            }
+            };
 
             $scope.$on('$routeChangeSuccess', function onRouteChangeSuccess(event, currentRoute) {
                 $scope.contactUsForm.$setUntouched();

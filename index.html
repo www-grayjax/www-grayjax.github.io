@@ -24,23 +24,33 @@
     <body ng-controller="GrayJaxRoot">
         <header>
             <div class="gj-content-block">
-                <a href="/">
+                <a href="/" ng-click="menuOptions.isOpen = false">
                     <img src="/img/logo.png" alt="GrayJax Logo" />
                 </a>
-                <a href="/products">Products</a>
-                <a href="/services">Services</a>
-                <a href="#contact">Contact</a>
-                <a class="gj-button gj-button-primary">
-                    <img src="/img/remote-techsupport-icon.png" alt="Remote Tech Support - Coming Soon!" />
-                    <div class="gj-content-block">
-                        Remote Tech Support
-                        <br />
-                        Coming Soon!
+                <a id="hamburger" class="medium-screen-down" ng-class="{ 'is-open': menuOptions.isOpen }" href="#" ng-click="menuOptions.isOpen = !menuOptions.isOpen">
+                    <div class="hamburger-bun">
+                    </div>
+                    <div class="hamburger-meat">
+                    </div>
+                    <div class="hamburger-bun">
+                    </div>
+                </a>
+                <a href="/products" ng-click="menuOptions.isOpen = false">Products</a>
+                <a href="/services" ng-click="menuOptions.isOpen = false">Services</a>
+                <a href="#contact" ng-click="menuOptions.isOpen = false">Contact</a>
+                <a>
+                    <div class="gj-button gj-button-primary">
+                        <img src="/img/remote-techsupport-icon.png" alt="Remote Tech Support - Coming Soon!" />
+                        <div class="gj-content-block">
+                            Remote Tech Support
+                            <br />
+                            Coming Soon!
+                        </div>
                     </div>
                 </a>
             </div>
         </header>
-        <ng-view id="{{ pageId }}"></ng-view>
+        <ng-view id="{{ pageId }}" ng-click="menuOptions.isOpen = false"></ng-view>
         <div id="contact">
             <div id="contact-content">
                 <h2>Interested in learning more about GrayJax's solutions?</h2>

@@ -15,25 +15,85 @@ header
     background: $white
 
     > .gj-content-block
-        +gj-content
-
-        padding-top: 1em
-        padding-bottom: 1em
         display: flex
         align-items: center
 
-        a:first-of-type
-            flex: 2
-
-        a
-            flex: 1
-
         .gj-button
-            flex: 2
             margin-bottom: 0
 
             img
                 margin-right: 1em
+
+        +large-screen-up
+            +gj-content
+
+            padding-top: 1em
+            padding-bottom: 1em
+
+            a:first-of-type
+                flex: 2
+
+            a
+                flex: 1
+
+            a:last-of-type
+                flex: 2
+
+        +medium-screen-down
+            justify-content: space-between
+            flex-flow: wrap
+            padding-left: 2.5em
+
+    [class*="hamburger"]
+        background: $black
+        width: 2em
+        height: 0.375em
+
+        &:not(:last-child)
+            margin-bottom: 0.25em
+
+    #hamburger
+        display: inline-flex
+        flex-direction: column
+        padding: 2.5em
+
+        ~ a
+            +medium-screen-down
+                margin-top: -480px
+                padding: 1.25em
+                width: 100%
+                transition: margin-top ease-in-out 0.25s
+
+        .hamburger-bun
+            position: relative
+            transition: all linear 0.1s
+
+            &:first-child
+                top: 0
+                transform: rotateZ(0)
+
+            &:last-child
+                bottom: 0
+                transform: rotateZ(0)
+
+        &.is-open
+            &, & ~ a
+                margin-top: 0
+                background: $offWhite
+                border-bottom: 1px solid $gjLitGray
+
+            .hamburger-bun
+                &:first-child
+                    top: 0.3125em
+                    transform: rotateZ(-45deg)
+                &:last-child
+                    bottom: 0.3125em
+                    transform: rotateZ(45deg)
+
+            .hamburger-meat
+                display: none
+
+    +medium-screen-down
 
 footer
     padding-top: 1em
@@ -44,6 +104,14 @@ footer
         font-size: inherit
         font-weight: inherit
         color: $white
+
+.large-screen-up
+    +medium-screen-down
+        display: none !important
+
+.medium-screen-down
+    +large-screen-up
+        display: none !important
 
 .ng-submitted .ng-invalid, .ng-touched.ng-invalid
     border: 0.25em solid $gjRed
