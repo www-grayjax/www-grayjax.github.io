@@ -57,49 +57,45 @@
                 <p>Contact us by filling out the form below and a GrayJax representative will reach out to you shortly:</p>
                 <form name="contactUsForm" method="POST" action="{{ :: contactUsFormUrl }}" novalidate ng-submit=" contactUs($event) ">
                     <input type="hidden" name="_next" value="/?hasContactedUs=true" />
-                    <div class="gj-form-row">
-                        <div class="gj-form-element gj-form-column-quarter">
-                            <label for="contact-form-name-input">Name</label>
-                            <input id="contact-form-name-input" type="text" name="name" ng-model="contactUsRequest.name" required />
-                            <span class="contact-form-validation-error">Please enter your name.</span>
+                    <div class="gj-form-element gj-form-column-quarter">
+                        <label for="contact-form-name-input">Name</label>
+                        <input id="contact-form-name-input" type="text" name="name" ng-model="contactUsRequest.name" required />
+                        <span class="contact-form-validation-error">Please enter your name.</span>
+                    </div>
+                    <div class="gj-form-element gj-form-column-quarter">
+                        <label for="contact-form-phone-number-input">Phone Number</label>
+                        <input id="contact-form-phone-number-input" type="tel" name="phoneNumber" ng-model="contactUsRequest.phoneNumber" ui-mask="(999) 999-9999" required />
+                        <span class="contact-form-validation-error">Please enter a valid phone number.</span>
+                    </div>
+                    <div class="gj-form-element gj-form-column-half">
+                        <label for="contact-form-email-input">Email Address</label>
+                        <input id="contact-form-email-input" type="email" name="email" ng-model="contactUsRequest.email" required />
+                        <span class="contact-form-validation-error">Please enter a valid email address.</span>
+                    </div>
+                    <div class="gj-form-element gj-form-column-quarter">
+                        <label for="contact-form-contact-method-input-option-{{ checked || 1 }}">Preferred Contact Method</label>
+                        <div class="gj-content-block">
+                            <input id="contact-form-contact-method-input-option-1" type="radio" name="preferredContactMethod" value="Phone" ng-click="checked = 2" />
+                            <label for="contact-form-contact-method-input-option-1">Phone</label>
                         </div>
-                        <div class="gj-form-element gj-form-column-quarter">
-                            <label for="contact-form-phone-number-input">Phone Number</label>
-                            <input id="contact-form-phone-number-input" type="tel" name="phoneNumber" ng-model="contactUsRequest.phoneNumber" ui-mask="(999) 999-9999" required />
-                            <span class="contact-form-validation-error">Please enter a valid phone number.</span>
-                        </div>
-                        <div class="gj-form-element gj-form-column-half">
-                            <label for="contact-form-email-input">Email Address</label>
-                            <input id="contact-form-email-input" type="email" name="email" ng-model="contactUsRequest.email" required />
-                            <span class="contact-form-validation-error">Please enter a valid email address.</span>
+                        <div class="gj-content-block">
+                            <input id="contact-form-contact-method-input-option-2" type="radio" name="preferredContactMethod" value="Email" checked ng-click="checked = 1" />
+                            <label for="contact-form-contact-method-input-option-2">Email</label>
                         </div>
                     </div>
-                    <div class="gj-form-row">
-                        <div class="gj-form-element gj-form-column-quarter">
-                            <label for="contact-form-contact-method-input-option-{{ checked || 1 }}">Preferred Contact Method</label>
-                            <div class="gj-content-block">
-                                <input id="contact-form-contact-method-input-option-1" type="radio" name="preferredContactMethod" value="Phone" ng-click="checked = 2" />
-                                <label for="contact-form-contact-method-input-option-1">Phone</label>
-                            </div>
-                            <div class="gj-content-block">
-                                <input id="contact-form-contact-method-input-option-2" type="radio" name="preferredContactMethod" value="Email" checked ng-click="checked = 1" />
-                                <label for="contact-form-contact-method-input-option-2">Email</label>
-                            </div>
-                        </div>
-                        <div class="gj-form-element gj-form-column-quarter">
-                            <label for="contact-form-company-name-input">Company Name</label>
-                            <input id="contact-form-company-name-input" type="text" name="companyName" placeholder="optional" />
-                        </div>
-                        <div class="gj-form-element gj-form-column-half">
-                            <label for="contact-form-type-of-inquery-select">Type of Inquiry</label>
-                            <select id="contact-form-type-of-inquery-select" name="inquiryType" ng-model="contactUsRequest.inqueryType" required>
-                                <option value="Repair">Repair</option>
-                                <option value="General Help">General Help</option>
-                                <option value="New System">New System</option>
-                                <option value="Assessment of Current System">Assessment of Current System</option>
-                            </select>
-                            <span class="contact-form-validation-error">Please select a type of inquery.</span>
-                        </div>
+                    <div class="gj-form-element gj-form-column-quarter">
+                        <label for="contact-form-company-name-input">Company Name</label>
+                        <input id="contact-form-company-name-input" type="text" name="companyName" placeholder="optional" />
+                    </div>
+                    <div class="gj-form-element gj-form-column-half">
+                        <label for="contact-form-type-of-inquery-select">Type of Inquiry</label>
+                        <select id="contact-form-type-of-inquery-select" name="inquiryType" ng-model="contactUsRequest.inqueryType" required>
+                            <option value="Repair">Repair</option>
+                            <option value="General Help">General Help</option>
+                            <option value="New System">New System</option>
+                            <option value="Assessment of Current System">Assessment of Current System</option>
+                        </select>
+                        <span class="contact-form-validation-error">Please select a type of inquery.</span>
                     </div>
                     <div class="gj-form-element">
                         <label for="contact-form-description-textarea">Describe your inquiry:</label>

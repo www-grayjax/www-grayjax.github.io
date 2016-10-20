@@ -18,16 +18,23 @@ header
         display: flex
         align-items: center
 
-        > a
-            img
-                +medium-screen-down
-                    margin-left: 2.5em
-
         .gj-button
             margin-bottom: 0
 
             img
                 margin-right: 1em
+
+        a:first-of-type
+            +medium-screen-down
+                margin-left: 2.5em
+
+            +small-screen-only
+                width: 65%
+                margin-left: 1em
+
+            img
+                +medium-screen-down
+                    width: 100%
 
         +large-screen-up
             +gj-content
@@ -60,6 +67,9 @@ header
         display: inline-flex
         flex-direction: column
         padding: 2.5em
+
+        +small-screen-only
+            padding: 1em
 
         ~ a
             +medium-screen-down
@@ -165,12 +175,6 @@ footer
 .gj-content-block
     display: inline-block
 
-.gj-form-row
-    display: flex
-
-    .gj-form-element:not(:first-child)
-        margin-left: 1em
-
 .gj-form-element
     margin-bottom: 1em
 
@@ -179,10 +183,19 @@ footer
         margin-bottom: 1em
 
 .gj-form-column-half
-    flex: 2
+    +large-screen-up
+        width: calc(50% - 1em)
 
 .gj-form-column-quarter
-    flex: 1
+    +large-screen-up
+        width: calc(25% - 1em)
+
+[class*="gj-form-column"]
+    +medium-screen-down
+        width: calc(50% - 1.25em)
+
+    +small-screen-only
+        flex: 100%
 
 .contact-form-validation-error
     display: none
@@ -193,17 +206,42 @@ footer
     text-align: center
     background: $black
 
+    form
+        display: flex
+        flex-wrap: wrap
+        justify-content: space-between
+
 #contact-content
     +gj-content
 
     padding-right: 10em
     padding-left: 10em
 
-    h3, p, label
+    +medium-screen-down
+        padding-right: 2.5em
+        padding-left: 2.5em
+
+    +small-screen-only
+        padding-right: 1em
+        padding-left: 1em
+
+    h2, p, label
         color: $white
+
+    h2, p
+        +small-screen-only
+            margin-right: 1.5em
+            margin-left: 1.5em
+
+    p
+        +medium-screen-down
+            margin-bottom: 2em
 
     form
         text-align: left
+
+        .gj-form-element:last-of-type
+            flex: 2 0 100%
 
 @import "pages/home"
 @import "pages/products"

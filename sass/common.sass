@@ -71,8 +71,12 @@ input:not([type="radio"]), select
     &:not(.gj-button)
         height: 2.5em
 
-input[type="radio"] + label
-    margin-right: 2.5em
+input[type="radio"]
+    +medium-screen-down
+        margin-bottom: 2em
+
+    & + label
+        margin-right: 2.5em
 
 textarea
     height: 7.5em
