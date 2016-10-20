@@ -19,6 +19,10 @@ $mediumBreakpoint: 768px
     @media only screen and (max-width: $largeBreakpoint - 1)
         @content
 
+=medium-screen-up
+    @media only screen and (min-width: $mediumBreakpoint)
+        @content
+
 =small-screen-only
     @media only screen and (max-width: $mediumBreakpoint - 1)
         @content

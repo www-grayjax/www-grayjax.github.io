@@ -11,11 +11,12 @@ $grayBlue: #D1D0D0
         background-size: cover
 
     .service-plan
-        flex: 1
+        width: calc(33.33% - 1.5em)
         border: 1px solid $gjGray
 
-        &:not(:first-of-type)
-            margin-left: 3em
+        +small-screen-only
+            width: 100%
+            margin-bottom: 2em
 
         h2
             padding: 1em 2em
@@ -37,3 +38,9 @@ $grayBlue: #D1D0D0
     display: flex
     width: 100%
     text-align: center
+
+    +medium-screen-up
+        justify-content: space-between
+
+    +small-screen-only
+        flex-wrap: wrap

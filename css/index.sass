@@ -26,13 +26,20 @@ header
 
         a:first-of-type
             +medium-screen-down
+                max-width: 50%
+                display: flex
+                align-items: center
+                height: 5em
                 margin-left: 2.5em
 
             +small-screen-only
-                width: 65%
+                height: 3em
                 margin-left: 1em
 
             img
+                max-width: 237px
+                width: 100%
+
                 +medium-screen-down
                     width: 100%
 
@@ -127,6 +134,10 @@ footer
     +large-screen-up
         display: none !important
 
+.small-screen-only
+    +medium-screen-up
+        display: none !important
+
 .ng-submitted .ng-invalid, .ng-touched.ng-invalid
     border: 0.25em solid $gjRed
 
@@ -182,21 +193,6 @@ footer
         display: block
         margin-bottom: 1em
 
-.gj-form-column-half
-    +large-screen-up
-        width: calc(50% - 1em)
-
-.gj-form-column-quarter
-    +large-screen-up
-        width: calc(25% - 1em)
-
-[class*="gj-form-column"]
-    +medium-screen-down
-        width: calc(50% - 1.25em)
-
-    +small-screen-only
-        flex: 100%
-
 .contact-form-validation-error
     display: none
     color: $gjLightRed
@@ -242,6 +238,21 @@ footer
 
         .gj-form-element:last-of-type
             flex: 2 0 100%
+
+    .gj-form-column-half
+        +large-screen-up
+            width: calc(50% - 1em)
+
+    .gj-form-column-quarter
+        +large-screen-up
+            width: calc(25% - 1em)
+
+    [class*="gj-form-column"]
+        +medium-screen-down
+            width: calc(50% - 1.25em)
+
+        +small-screen-only
+            flex: 100%
 
 @import "pages/home"
 @import "pages/products"

@@ -11,19 +11,36 @@ $lightBlue: #F5F8F9
             max-width: 600px
             margin: 0 auto
 
+    .gj-content
+        label:first-child
+            display: block
+            margin-bottom: 1em
+
 .products-comparion-grid-row
     display: flex
     text-align: center
     border-bottom: 1px solid $gjLightGray
 
     .gj-content-block
-        flex: 2
+        flex: 3
         display: flex
         align-items: center
         padding: 1em 2em
 
+        +medium-screen-down
+            padding-right: 1em
+            padding-left: 1em
+
+        +small-screen-only
+            padding-right: 0.4em
+            padding-left: 0.4em
+
+            &:nth-child(2), &:nth-child(3), &:nth-child(4)
+                display: none
+
         &:first-of-type
-            flex: 1
+            flex: 2
+            padding-left: 0
             text-align: right
 
         &:nth-child(2), &:nth-child(4)
@@ -38,9 +55,20 @@ $lightBlue: #F5F8F9
         h2, span
             flex: 1
 
-
 #products-comparison-grid
     width: 100%
+
+    &.show-value .products-comparion-grid-row .gj-content-block:nth-child(2)
+        +small-screen-only
+            display: flex
+
+    &.show-premium .products-comparion-grid-row .gj-content-block:nth-child(3)
+        +small-screen-only
+            display: flex
+
+    &.show-performance .products-comparion-grid-row .gj-content-block:nth-child(4)
+        +small-screen-only
+            display: flex
 
 #products-comparion-grid-header
     border-bottom: 1px solid $gjGray

@@ -7,7 +7,13 @@
     </div>
 </div>
 <div class="gj-content">
-    <div id="products-comparison-grid">
+    <label for="product-select-product">Select to view details about our Value, Premium, or Performance product</label>
+    <select id="product-select-product" class="small-screen-only" ng-init="selectedProduct = 'show-value'" ng-model="selectedProduct">
+        <option value="show-value" selected>Value</option>
+        <option value="show-premium">Premium</option>
+        <option value="show-performance">Performance</option>
+    </select>
+    <div id="products-comparison-grid" class="{{ selectedProduct }}">
         <div id="products-comparion-grid-header" class="products-comparion-grid-row">
             <div class="gj-content-block">
             </div>

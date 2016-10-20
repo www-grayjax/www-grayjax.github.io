@@ -15,12 +15,24 @@
     .gj-content
         display: flex
 
+        +large-screen-up
+            justify-content: space-between
+
+        +medium-screen-down
+            justify-content: center
+            flex-wrap: wrap
+
     .gj-content-block
-        flex: 1
+        width: calc(33.33% - 2em)
         text-align: center
 
-        &:not(:first-of-type)
-            margin-left: 4em
+        +medium-screen-down
+            width: calc(100% - 5em)
+            margin-bottom: 2.5em
+
+        +small-screen-only
+            width: calc(100% - 2em)
+            margin-bottom: 1em
 
         img
             margin-bottom: 2em
